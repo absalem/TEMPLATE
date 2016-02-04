@@ -1,22 +1,9 @@
 {
-  "name": "Test-Projekt",
-  "description": "Hier wird alles mögliche getestet.",
-  "main": "",
-  "authors": [
-    "absalem <absalem@gmail.com>"
-  ],
-  "license": "MIT",
-  "moduleType": [
-    "globals"
-  ],
-  "homepage": "",
+  "name": "cms-theme",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
+  "version": "1.0.0",
   "dependencies": {
-    "jquery": "~2.1.4"
+    "normalize-scss": "3.0.*",
+    "jquery": "1.*"
   }
 }

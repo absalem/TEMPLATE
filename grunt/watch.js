@@ -2,12 +2,12 @@ module.exports = {
 
     options: {
         spawn: false,
-        livereload: true 
+        livereload: true
     },
 
     html:{
         files:[
-            'src/docs/*.html'
+            'src/*.html'
         ],
         tasks:[
             'copy:html'
@@ -48,7 +48,17 @@ module.exports = {
             'src/styles/*.scss'
         ],
         tasks: [
-            'sass:dev'
+            'sass:dev',
+            'postcss'
+        ]
+    },
+
+    styles_prefix: {
+        files: [
+            'dist/styles/*.css'
+        ],
+        tasks: [
+            'postcss'
         ]
     },
 };

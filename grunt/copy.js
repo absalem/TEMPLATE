@@ -1,9 +1,19 @@
 
 module.exports = {
+
+folder: {
+    expand: true,
+    cwd: 'src/assets',
+    src: '**/*.**',
+    dest: 'dist/assets',
+    flatten: false,
+    filter: 'isFile',
+  },
+
 html: {
     expand: true,
-    cwd: 'src/docs',
-    src: '**',
+    cwd: 'src/',
+    src: '**/*.html',
     dest: 'dist/',
     flatten: true,
     filter: 'isFile',
@@ -29,8 +39,8 @@ html: {
 
   vendor: {
     expand: true,
-    cwd: 'src/scripts/vendor',
-    src: '**/*.js',
+    cwd: 'bower_components',
+    src: '**/*.min.js',
     dest: 'dist/scripts/vendor',
     flatten: true,
     filter: 'isFile',

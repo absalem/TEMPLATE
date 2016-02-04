@@ -1,17 +1,18 @@
 default:
   description: 'Default (production) build'
   tasks:
-    - prod
+    - dev
 dev:
   description: 'Development build'
   tasks:
     - 'concurrent:devFirst'
     - 'concurrent:devSecond'
+    - 'postcss'
     - 'copy'
     - 'connect'
     - 'watch'
-    
-    
+
+
 
 img:
   description: 'Image tasks'

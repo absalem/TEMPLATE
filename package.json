@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Hier wird alles mögliche getestet.",
   "devDependencies": {
-    "bower": "^1.7.7",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^2.0.4",
     "grunt-contrib-clean": "^0.6.0",
@@ -14,11 +13,13 @@
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-uglify": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",
     "load-grunt-config": "^0.19.0"
   },
   "dependencies": {
     "jshint-stylish": "^2.0.1",
+    "normalize.css": "^3.0.3",
     "time-grunt": "^1.2.2"
   }
 }
