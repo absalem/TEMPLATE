@@ -1,0 +1,290 @@
+h1 {
+    font-size: 2em;
+    padding-top: 50px;
+    line-height: 1em;
+
+    @include tablet {
+        font-size: 2.5em;
+    }
+
+
+    @include desktop {
+        font-size: 3em;
+        margin: 0;
+    }
+}
+
+p {
+    width: auto;
+    margin-bottom: 2em;
+
+    @include tablet {
+        width: auto;
+    }
+
+
+    @include desktop {
+        width: 440px;
+    }
+}
+
+.more-link{
+	border: 3px solid black;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 9px 35px;
+}
+
+
+.article.section1 .textcontent {
+    padding-top: 340px;
+    padding-left: 10px;
+    padding-right: 20px;
+
+    @include tablet {
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+
+
+    @include desktop {
+        padding-top: 130px;
+        padding-left: 0;
+    }
+
+
+    p {
+        @include tablet {
+            width: 400px;
+        }
+    }
+
+    h1 {
+        padding-top: 0px;
+    }
+}
+
+.article.section1 {
+    background-image: url(../images/header_bg_mobile.jpg);
+    background-size: 100%;
+    height: 720px;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        background-image: url(../images/header_bg.jpg);
+        background-size: cover;
+        height: 510px;
+    }
+
+
+    @include desktop {
+        background-image: url(../images/header_bg.jpg);
+        height: 591px;
+    }
+}
+
+.main .produktnav {
+    background-color: black;
+    margin: 0 auto;
+    height: auto;
+
+    @include desktop {
+        height: 134px;
+    }
+
+
+    span {
+        position: relative;
+        top: 0;
+        float: none;
+        display: block;
+        font-weight: 600;
+        color: white;
+        padding: 15px;
+        font-size: 1.6em;
+
+        @include tablet {
+            display: block;
+            float: none;
+            width: auto;
+            top: 0;
+        }
+
+
+        @include desktop {
+            float: left;
+            top: 35px;
+            width: 270px;
+            display: inline-block;
+        }
+    }
+
+    img {
+        margin: 5px 15px 26px 15px;
+        float: left;
+        width: 40%;
+
+        @include tablet {
+            margin: 0;
+            margin-right: 25px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            display: inline;
+            width: auto;
+        }
+
+
+        @include desktop {
+            margin: 0;
+            margin-right: 75px;
+            display: inline;
+            width: auto;
+        }
+    }
+}
+
+.main .produktnav .produktnavInner {
+    position: relative;
+    top: 0;
+    margin-left: 25px;
+
+    @include tablet {
+        top: 0;
+    }
+
+
+    @include desktop {
+        top: -30px;
+        margin-left: auto;
+    }
+}
+
+.overview.bv-center {
+    margin-top: 50px;
+}
+
+.overview.bv-center .textcontent {
+    padding-left: 10px;
+    float: none;
+    width: auto;
+    margin: 0;
+
+    @include desktop {
+        margin: 30px 20px 0 20px;
+        float: left;
+        padding: 0;
+    }
+}
+
+.overviewInner {
+    img.hero {
+        width: 100%;
+        max-width: 749px;
+
+        @include tablet {
+            width: 50%;
+            float: left;
+        }
+
+
+        @include desktop {
+            width: 50%;
+            float: left;
+            margin-right: 2em;
+        }
+    }
+}
+
+.article_product {
+    position: relative;
+    margin-top: 6em;
+
+    .hero {
+        width: 100%;
+
+        img:nth-child(1) {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0;
+        }
+    }
+
+    .textcontent {
+        position: relative;
+        top: -37px;
+        width: auto;
+        padding: 10px;
+
+        @include tablet {
+            top: -90px;
+            left: 0px;
+        }
+
+
+        @include desktop {
+            top: -47px;
+            left: 0;
+        }
+
+
+        h1 {
+            padding-top: 0;
+
+            @include tablet {
+                padding-top: 97px;
+            }
+
+
+            @include desktop {
+                padding-top: 101px;
+            }
+        }
+
+        p {
+            width: auto;
+            margin-bottom: 2em;
+
+            @include tablet {
+                width: 760px;
+            }
+
+
+            @include desktop {
+                width: 840px;
+            }
+        }
+
+        .logo {
+            display: inline-block;
+            float: none;
+
+            @include tablet {
+                float: left;
+                margin: 20px 20px 0 50px;
+                height: 330px;
+            }
+
+
+            @include desktop {
+                float: left;
+                margin: 3px 30px 0 50px;
+                height: 330px;
+            }
+
+
+            img {
+                width: 60%;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+
+                @include desktop {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

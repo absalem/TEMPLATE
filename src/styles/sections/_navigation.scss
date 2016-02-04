@@ -1,0 +1,72 @@
+.nav{
+	display: none;
+	font-size: 1.5em;
+	position: relative;
+	top: -0.7em;
+	 @include desktop {
+    display: inline-block;
+  }
+}
+
+.nav li{
+	display: inline-block;
+    padding: 0.5em 1.1em;
+}
+
+.nav li:nth-child(4){
+	    border: 3px solid #42b5f0;
+	    margin: 0 1.1em;
+	    a{
+	    	color: #42b5f0;
+
+	    }
+}
+
+.nav li:nth-child(5){
+	   
+	    a{
+	    	font-weight: 800;
+	    }
+}
+
+#mobile_nav{
+	right: 0;
+	display: block;
+	position: absolute;
+	width: 200px;
+	 @include desktop {
+     display: none;
+	}
+
+}
+
+ @include desktop {
+    font-size: 20px;
+  }
+
+div#mobile_nav .slicknav_menu{
+	background: black;
+	text-align: right;
+	font-size: 1.6em;
+}
+
+div#mobile_nav .slicknav_menu .slicknav_btn{
+	background: none;
+}
+
+
+.logo-container{
+	text-align: left;
+	@include scale(0.55);
+	left: -109px;
+
+	@include tablet {
+    @include scale(1);
+    left: 0;
+	}
+
+	@include desktop {
+    @include scale(1);
+    left: 0;
+	}
+}

@@ -1,0 +1,138 @@
+//COLORS
+$color-text: #000;
+$default-background-color: #FFF;
+
+//FONTS
+$font-family-default: "PT Sans", sans-serif !default;
+$font-size-default: 1em;
+$line-height-default: normal;
+
+//LINKS
+$link-color-default: #000;
+
+//MEDIA QUERIES
+//extra small devices is default - MOBIL FIRST
+// small devices
+$tablet-width: 768px;
+$desktop-width: 992px;
+$desktop-large-width: 1200px;
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+// ************************** MIXINS: CLEARFIX **************************************************************
+
+@mixin cf {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/*
+Usage:
+.whatever {
+     @include cf();
+}
+*/
+
+// ************************** MIXINS: RESPONSIVE **************************************************************
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-large-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: #{$desktop-large-width}) {
+        @content;
+    }
+}
+
+/*
+Usage:
+.whatever {
+     @include tablet{
+        float: left;
+     }
+}
+*/
+
+// ************************** MIXINS: TRANSFORM **************************************************************
+
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+/*
+Usage:
+.whatever {
+    @include skew(25,10);
+    @include transform-origin(top left);
+}
+*/
+
+// ************************** MIXINS: BOX SHADOW **************************************************************
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}

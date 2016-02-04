@@ -1,0 +1,22 @@
+{
+  "name": "Test-Projekt",
+  "description": "Hier wird alles mögliche getestet.",
+  "main": "",
+  "authors": [
+    "absalem <absalem@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
