@@ -37,7 +37,15 @@ html: {
     filter: 'isFile',
   },
 
-  vendor: {
+  vendor_js: {
+    expand: true,
+    cwd: 'bower_components',
+    src: '**/*.min.js',
+    dest: 'dist/scripts/vendor',
+    flatten: true,
+    filter: 'isFile',
+  },
+  vendor_css: {
     expand: true,
     cwd: 'bower_components',
     src: '**/*.min.js',
