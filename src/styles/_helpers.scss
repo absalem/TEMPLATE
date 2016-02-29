@@ -1,7 +1,25 @@
-.bv-center{
-	margin: 0 auto;
+/**
+* Helper
+*
+* @desc Helper are classes and formattings which are used to accomplish repeating task. Mainly we use ds- for design-task and bv- for behavioral tasks.
+* @author [XX]
+* @dependency _app_settings.scss
+*/
+
+// Behavioral Tasks (.bv-)
+
+.bv-center {
+    margin: 0 auto;
 }
 
 .bv-width-max {
-    max-width:1185px;
+    max-width: 1185px;
+}
+
+.bv-float-left {
+    float: left;
+}
+
+.bv-float-right {
+    float: right;
 }
