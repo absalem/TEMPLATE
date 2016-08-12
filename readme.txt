@@ -3,5 +3,5 @@
 3. npm install (package.json)
 4. bower install (bower.json)
 5. grunt (Gruntfile.js)
-6. blablub
+6. bla
 
