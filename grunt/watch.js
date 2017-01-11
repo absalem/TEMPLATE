@@ -45,11 +45,11 @@ module.exports = {
 
     styles: {
         files: [
-            'src/styles/*.scss'
+            'src/styles/**/*.scss'
         ],
         tasks: [
             'sass:dev',
-            'postcss'
+            'postcss:dev'
         ]
     },
 
@@ -58,7 +58,7 @@ module.exports = {
             'dist/styles/*.css'
         ],
         tasks: [
-            'postcss'
+            'postcss:dev'
         ]
     },
 };
