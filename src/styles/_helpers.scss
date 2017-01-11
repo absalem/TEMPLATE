@@ -1,7 +1,231 @@
+/**
+* Helper
+*
+* @desc Helper are classes and formattings which are used to accomplish repeating task. Mainly we use ds- for design-task and bv- for behavioral tasks.
+* @author [HZ]
+* @dependency _app_settings.scss
+*/
+
+// Behavioral Tasks (.bv-)
+
 .bv-center{
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .bv-width-max {
     max-width:1185px;
 }
+
+
+.bv-cf {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.bv-float-left {
+  float: left;
+}
+
+.bv-float-right {
+  float: right;
+}
+
+.bv-width-50, .width_1_2 {
+  width: 50%;
+  box-sizing: border-box;
+
+  @media (max-width: 760px) {
+    width: 100%;
+    }
+}
+
+.bv-wrapper {
+  max-width: $overall-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+@mixin bv-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Design Tasks (.ds-)
+@mixin ds-box-shadow($color) {
+  box-shadow: 3px 3px 3px $color;
+}
+
+@mixin ds-special-bullets($bullet, $color) {
+  ul {
+    list-style: none;
+    margin-left: -5px;
+    padding: 0 0 0 25px;
+    li {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    li:before {
+      display: inline-block;
+      width: 1.5em;
+      height: 15px;
+      font-size: 1.2em;
+      text-align: center;
+      color: $color;
+      margin: 0 0 0 -26px;
+      content: $bullet;
+      line-height: 1.7;
+      position: relative;
+      bottom: 1px;
+    }
+  }
+}
+
+@mixin product-color-fade($color) {
+  0% {
+    background: inherit;
+  }
+  100% {
+    background: $color;
+  }
+}
+/*
+.ds-velvet-black {
+  background: $color-velvet-black;
+}
+
+.ds-navy-blue {
+  background: $color-navy-blue;
+}
+
+.ds-jeans-blue {
+  background: $color-jeans-blue;
+}
+
+.ds-antiqoe-grey {
+  background: $color-antiqoe-grey;
+}
+
+.ds-dark-brown {
+  background: $color-dark-brown;
+}
+
+.ds-dark-green {
+  background: $color-dark-green;
+}
+
+.ds-intense-violet {
+  background: $color-intense-violet;
+}
+
+.ds-tulip-red {
+  background: $color-tulip-red;
+}
+
+.ds-bahama-blue {
+  background: $color-bahama-blue;
+}
+
+.ds-flamingo-pink {
+  background: $color-flamingo-pink;
+}
+*/
+
+@mixin ds-arrow-after($font-size, $line, $symbol) {
+  &:after {
+    @include font-icon;
+
+    content: $symbol;
+    position: relative;
+    bottom: $line;
+    margin: 0 0 0 3px;
+    color: $color-white;
+    font-size: $font-size;
+  }
+}
+
+@mixin ds-box-shadow($left, $top, $diff, $color) {
+  box-shadow: $left $top $diff $color;
+}
+
+@mixin ds-box-shadow-inset($left, $top, $diff, $color) {
+  box-shadow: inset $left $top $diff $color;
+}
+
+@mixin ds-border-radius($radius: 1px) {
+  border-radius: $radius;
+}
+
+@mixin ds-special-bullets($bullet, $color) {
+  ul {
+    list-style: none;
+    margin-left: -5px;
+    padding: 0 0 0 25px;
+
+    li {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    li:before {
+      display: inline-block;
+      width: 1.5em;
+      height: 15px;
+      font-size: 1.2em;
+      text-align: center;
+      color: $color;
+      margin: 0 0 0 -26px;
+      content: $bullet;
+      line-height: 1.7;
+      position: relative;
+      bottom: 1px;
+    }
+  }
+}
+
+@mixin ds-box-shadow-right {
+  &:after {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    right: 20px;
+    left: auto;
+    width: 50%;
+    height: 20px;
+    max-width: 50%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    transform: rotate(3deg);
+  }
+}
+
+@mixin ds-button-hover($scale, $duration) {
+  &:hover {
+    transform: scale($scale);
+    transition: all $duration;
+    background: #fff;
+    color: $color-midnight-blue;
+  }
+}
+
+// Animations
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

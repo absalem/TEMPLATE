@@ -1,9 +1,32 @@
 //COLORS
-$color-text: #000;
-$default-background-color: #FFF;
+// Layout colors (take naming ideas from http://chir.ag/projects/name-that-color/)
+$color-white: rgba(255,255,255,1);
+$color-black: rgba(0,0,0,1);
+
+$color-text: $color-black;
+$default-background-color: $color-white;
+
+
+/*$color-pink: rgba(232,46,137,1);
+$color-thunderbird: rgb(204, 44, 29); // Henkel Rot
+$color-scarlet: rgb(255, 30, 26); // Signal Red
+$color-text: $color-white; //rgba(204,204,204,1);
+
+// Product colors
+$color-velvet-black: $color-black;
+$color-navy-blue: rgba(14,23,68,1); //#0E1744
+$color-jeans-blue: rgba(30,55,98,1); //#1E3762
+$color-antiqoe-grey: rgba(98,101,106,1); //#62656A
+$color-dark-brown: rgba(47,23,21,1); //#2F1715
+$color-dark-green: rgba(9,59,38,1); //#093B26
+$color-intense-violet: rgba(106,48,121,1); //#6A3079
+$color-tulip-red: rgba(217,18,65,1); //#D91241
+$color-bahama-blue: rgba(0,179,209,1); //#00B3D1
+$color-flamingo-pink: rgba(223,20,145,1); //#DF1491*/
+
+
 
 //FONTS
-// Layout colors (take naming ideas from http://chir.ag/projects/name-that-color/)
 $font-family-default: "PT Sans", sans-serif !default;
 $font-size-default: 1em;
 $line-height-default: normal;
@@ -11,9 +34,17 @@ $line-height-default: normal;
 //LINKS
 $link-color-default: #000;
 
+// WIDTH
+//$overall-width: 1080px;
+
+// SPACING
+//$spacing: 25px;
+
+
 //MEDIA QUERIES
 //extra small devices is default - MOBIL FIRST
 // small devices
+// Breakpoints (For em calculation use http://pxtoem.com/)
 $tablet-width: 768px;
 $desktop-width: 992px;
 $desktop-large-width: 1200px;
